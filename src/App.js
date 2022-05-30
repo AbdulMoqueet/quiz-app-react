@@ -8,11 +8,11 @@ function App() {
   const dispatch = useDispatch()
 
 const handleAdd = () => {
-  dispatch(incNumber())
+  dispatch(incNumber(1))
 }
 
 const handleSub = () => {
-  dispatch(decNumber())
+  dispatch(decNumber(1))
 }
 
   return (
