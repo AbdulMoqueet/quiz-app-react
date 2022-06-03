@@ -161,7 +161,13 @@ const Quiz = () => {
                 bottom: "20px"
             }}>
 
-                <Button onClick={onSubmit} variant='contained' sx={{ width: "390px", padding: "15px 0", background: currentSelectedOp !== null ? "#FF6B2F" : "gray", "&:hover": { background: currentSelectedOp !== null ? "#FF6B2F" : "gray", cursor: "pointer" } }}>Submit</Button>
+                <Button onClick={onSubmit} variant='contained' sx={{ width: "390px",
+                 padding: "15px 0",
+                 background: currentSelectedOp !== null ? "#FF6B2F" : "gray",
+                 "&:hover": { 
+                     background: currentSelectedOp !== null ? "#FF6B2F" : "gray", 
+                     cursor: currentSelectedOp !== null ? "pointer" : "auto"
+                     } }}>Submit</Button>
 
             </Box>
         </Box>
