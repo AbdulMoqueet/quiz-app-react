@@ -1,13 +1,20 @@
-export const incNumber = (payload) => {
+export const setUsername = (payload) => {
     return {
-        type: "INCREMENT",
+        type: "SET_USERNAME",
         payload
     }
 }
 
-export const decNumber = (payload) => {
+export const setScore = (payload) => {
     return {
-        type: "DECREMENT",
+        type: "SET_SCORE",
+        payload
+    }
+}
+
+export const setLocalScore = (payload) => {
+    return {
+        type: "SET_LOCAL_SCORE",
         payload
     }
 }

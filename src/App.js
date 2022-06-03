@@ -1,31 +1,30 @@
-import { useSelector, useDispatch } from 'react-redux'
+import React from 'react'
+import Login from './pages/Login'
+import { Box, Container } from '@mui/material'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Quiz from './pages/Quiz';
+import Pass from './pages/Pass';
+import Fail from './pages/Fail';
 
-import {incNumber, decNumber} from './actions'
-
-function App() {
-
-  const count = useSelector(state => state.counter)
-  const dispatch = useDispatch()
-
-const handleAdd = () => {
-  dispatch(incNumber(1))
-}
-
-const handleSub = () => {
-  dispatch(decNumber(1))
-}
-
+const App = () => {
   return (
-    <div className="App">
-      <div className="container">
+    <Box width="400px" margin="auto">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/:id" element={<Quiz />} />
+          <Route path="/pass" element={<Pass />} />
+          <Route path="/fail" element={<Fail />} />
+        </Routes>
+      </BrowserRouter>
 
-        <div className="plus" onClick={handleAdd}>+</div>
-        <div className="counter">{count}</div>
-        <div className="minus" onClick={handleSub}>-</div>
+    </Box>
 
-      </div>
-    </div>
-  );
+  )
 }
 
-export default App;
+export default App

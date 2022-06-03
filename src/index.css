@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -9,6 +9,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../public/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 code {
@@ -16,29 +21,8 @@ code {
     monospace;
 }
 
-.App{
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-}
-
-.container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  font-size: 30px;
-}
-
-.plus, .minus{
-  background-color: red;
-  padding: 0.5rem 2rem;
-}
-
-.minus{
-  background-color: green;
-}
-
-.counter{
-  padding: 0.5rem 2rem;
+.option__active {
+  background-color: #fff !important;
+  border: 2px solid #fff !important;
+  color: #000 !important;
 }
