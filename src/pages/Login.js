@@ -3,6 +3,7 @@ import { Box, TextField, Typography, styled, createTheme, ThemeProvider, Input, 
 import { useNavigate } from 'react-router-dom'
 import { setUsername } from '../actions'
 import { useDispatch } from 'react-redux'
+import MyButton from '../components/MyButton'
 
 
 const Login = () => {
@@ -66,15 +67,7 @@ const Login = () => {
                 bottom: "20px"
             }}>
 
-                <Button onClick={handleSubmit} variant='contained' sx={{
-                    width: "400px",
-                    padding: "15px 0",
-                    background: input ? "#FF6B2F" : "gray",
-                    "&:hover": {
-                        background: input ? "#FF6B2F" : "gray",
-                        cursor: input ? "pointer" : "auto"
-                    }
-                }}>Get Started</Button>
+                <MyButton onSubmit={handleSubmit} state={input} text="Get Started" />
 
             </Box>
 

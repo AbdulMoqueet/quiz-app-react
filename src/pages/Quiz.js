@@ -6,6 +6,7 @@ import { setScore, setUsername, setLocalScore } from '../actions'
 import { useDispatch, useSelector } from 'react-redux'
 
 import questions from '../questions'
+import MyButton from '../components/MyButton'
 
 const Quiz = () => {
 
